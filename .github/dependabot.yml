@@ -1,0 +1,22 @@
+# Dependabot: meldet veraltete und verwundbare Abhängigkeiten als Pull Request.
+#
+# Der Worker hat KEINE Laufzeit-Abhängigkeiten – alles hier sind Werkzeuge (wrangler,
+# eslint, prettier, cspell). Deshalb monatlich und in einer Gruppe. Sicherheits-Updates
+# kommen unabhängig davon sofort (Repo-Einstellung „Dependabot security updates“).
+#
+# Dieses Repo ist eine Kopie von sveltia/sveltia-cms-auth (Deploy-Button, 20.08.2026).
+# Code-Änderungen von dort übernehmen statt hier selbst zu ändern – Abgleich am
+# 12.10.2026. Upstream wird über GitHub „Watch → Custom → Releases/Security“ verfolgt.
+#
+# Push auf main deployt den Auth-Worker des HTVB-CMS (Cloudflare Workers Builds).
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 3
+    groups:
+      werkzeuge:
+        patterns:
+          - "*"
