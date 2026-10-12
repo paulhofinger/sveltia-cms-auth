@@ -1,3 +1,10 @@
 name = "sveltia-cms-auth"
 main = "src/index.js"
 compatibility_date = "2023-03-24"
+
+# ALLOWED_DOMAINS gehört hierher, nicht ins Dashboard: wrangler deploy (Workers Builds)
+# entfernt Klartext-Variablen, die nur im Dashboard stehen. Am 12.10.2026 fiel so die
+# Domain-Sperre nach einem Push weg. Der Wert ist nicht geheim (steht im ausgelieferten HTML).
+# Secrets (GITHUB_CLIENT_ID/SECRET) bleiben im Dashboard, die überleben einen Deploy.
+[vars]
+ALLOWED_DOMAINS = "haustechnik-voecklabruck.at, htvb-website.pages.dev"
