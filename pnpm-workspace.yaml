@@ -9,6 +9,10 @@ auditConfig:
     # braces, used only in Stylelint
     # https://github.com/advisories/GHSA-vfj7-8cjw-p6xm
     - GHSA-vfj7-8cjw-p6xm
+    # minimatch < 11.0.1, used only by ESLint 10 (requires ^10, no fix possible yet).
+    # Remove once ESLint moves to minimatch 11; the Dependabot alert stays open as a reminder.
+    # https://github.com/advisories/GHSA-g3hv-75wg-m249
+    - GHSA-g3hv-75wg-m249
 
 engineStrict: true
 

@@ -19,4 +19,4 @@ updates:
     groups:
       werkzeuge:
         patterns:
-          - "*"
+          - '*'
